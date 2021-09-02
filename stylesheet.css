@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+body{
+    background-color: #282A36;
+    color: white;
+}
+div.head{
+    font-family: 'Teko', sans-serif;
+    text-align: center;
+    font-size:140px;
+}
+div.nav{
+    text-align: center;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+.button:hover{
+    opacity: 0.8;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.button:hover span {
+    padding-right: 25px;
+}
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+a.butt{
+    color: white;
+    text-decoration: none;
+    
+}
+div.commands{
+    font-family: Roboto;
+    color:#7289DA;
+}
+li.item{
+    list-style-type:none;
+    font-size: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+ul.sub{
+    font-size: 27px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    list-style-type: disc;
+    color:#c6d2fd;
+}
+span.subsub{
+    color:#e8e8eb;
+    padding-left: 10px;
+    font-size: 25px;
+}
+span.cmd{
+    background-color:#313336;
+    color:#D1DDBE;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 22px;
+}
+li.tt{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+div.tst{
+    font-family: 'Teko', sans-serif;
+    text-align: center;
+    font-size:75px;
+}
+img.img{
+    border-radius: 20px;
+}
+div.pics{
+    font-family: Roboto;
+    font-size: 50px;
+    padding-top: 70px;
+}
