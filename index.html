@@ -5,19 +5,38 @@
     <link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
     <link rel="shortcut icon" href="assets/logo.ico" type="image/x-icon">
 </head>
-<body>
+<body onload="myFunction()">
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
     <br>
     <br>
+    <div class="superhead">
+        <img src="assets/logoo.png" class="image" width="7%">
+    </div>
 	<div class="head">
         JsM Bot
     </div>
     <br>
     <div class="nav">
-        <button class="button" style="vertical-align:middle"><span><a class="butt" href="https://discord.com/api/oauth2/authorize?client_id=870932828504866816&permissions=137744477558&scope=bot" target="_blank">Invite Me</a></span></button>
-        <button class="button" style="vertical-align:middle"><span><a class="butt" href="https://top.gg/bot/870932828504866816" target="_blank">Top.gg</a></span></button>
+        <button class="button" style="vertical-align:middle;background-color: #4CAF50;"><span><a class="butt" href="https://discord.com/api/oauth2/authorize?client_id=870932828504866816&permissions=415306739062&scope=bot" target="_blank">Invite Me</a></span></button>
+        <button class="button" style="vertical-align:middle;background-color: #4CAF50;"><span><a class="butt" href="https://top.gg/bot/870932828504866816" target="_blank">Top.gg</a></span></button>
     </div>
     <div class="nav">
-        <button class="button" style="vertical-align:middle"><span><a class="butt" href="#comms">Commands</a></span></button>
+        <button class="button" style="vertical-align:middle;background-color: #4CAF50;"><span><a class="butt" href="#comms">Commands</a></span></button>
+    </div>
+    <br>
+    <div class="tsst">
+        Click on the following to categories to jump to them
+    </div>
+    <br>
+    <div class="nav">
+        <button class="button" style="vertical-align:middle;background-color:#011627"><span><a class="butt" href="#mod">Moderation</a></span></button>        
+        <button class="button" style="vertical-align:middle;background-color:#011627""><span><a class="butt" href="#fun">Fun</a></span></button>        
+        <button class="button" style="vertical-align:middle;background-color:#011627""><span><a class="butt" href="#util">Utility</a></span></button>        
+        <button class="button" style="vertical-align:middle;background-color:#011627""><span><a class="butt" href="#img">Image</a></span></button>        
+        <button class="button" style="vertical-align:middle;background-color:#011627""><span><a class="butt" href="#music">Music</a></span></button>        
+        <button class="button" style="vertical-align:middle;background-color:#011627""><span><a class="butt" href="#math">Maths</a></span></button>        
+        <button class="button" style="vertical-align:middle;background-color:#011627""><span><a class="butt" href="#chem">Chemistry</a></span></button>        
+        <button class="button" style="vertical-align:middle;background-color:#011627""><span><a class="butt" href="#prog">Programming</a></span></button>
     </div>
     <br>
     <br>
@@ -77,6 +96,19 @@
         </table>
         <table style="text-align:center">
             <tr>
+                <td colspan="3" style="padding-bottom: 70px;">Powerful Code Compiler with 8 supported languages</td>
+            </tr>
+            <tr>
+                <td >
+                    <img class="img" src="assets/23.png">
+                </td>
+                <td>
+                    <img class="img" src="assets/24.png">
+                </td>
+            </tr>
+        </table>
+        <table style="text-align:center">
+            <tr>
                 <td colspan="3" style="padding-bottom: 70px;">Great Fun Commands</td>
             </tr>
             <tr>
@@ -102,7 +134,7 @@
     <br>
     <div class="commands">
         <ul>
-            <li class="item"><img src="assets/1.png"> Moderation
+            <li class="item" id = "mod"><img src="assets/1.png"> Moderation
                 <ul class="sub">
                     <li class="tt">mute<span class="subsub">- Mutes a user <span class="cmd">j mute @user</span></span></li>
                     <li class="tt">unmute<span class="subsub">- Unmutes a user <span class="cmd">j unmute @user</span></span></li>
@@ -113,12 +145,13 @@
                     <li class="tt">bans<span class="subsub">- Shows a list of banned users <span class="cmd">j bans</span></span></li>
                 </ul>
             </li>
-            <li class="item"><img src="assets/2.png"> Fun
+            <li class="item" id = "fun"><img src="assets/2.png"> Fun
                 <ul class="sub">
                     <li class="tt">say<span class="subsub">- Repeats what you say <span class="cmd">j say &lt;text&gt;</span></span></li>
+                    <li class="tt">8ball<span class="subsub">- Ask a question, get a answer. <span class="cmd">j 8ball [question]</span></span></li>
                     <li class="tt">ghostping<span class="subsub">- Use this command to ghostping a user <span class="cmd">j ghostping @member &lt;number of times&gt;</span> Default number of times = 1</span></li>
                     <li class="tt">choose<span class="subsub">- Use this command to make a choice <span class="cmd">j choose [Option 1], [Option 2], [Option 3] .....</span></span></li>
-                    <li class="tt">gif<span class="subsub">- Shows a gif of your desired query <span class="cmd">j gif [what you want gif of]</span> Default query = Hello</span></li>
+                    <!-- <li class="tt">gif<span class="subsub">- Shows a gif of your desired query <span class="cmd">j gif [what you want gif of]</span> Default query = Hello</span></li> -->
                     <li class="tt">gay<span class="subsub">- Calculates gay percentage of someone <span class="cmd">j gay @user</span></span></li>
                     <li class="tt">ship<span class="subsub">- Ships two users <span class="cmd">j ship @user1 @user2</span></span></li>
                     <li class="tt">drunkify<span class="subsub">- Drunkifies a text by making alternate uppercase and lowercase <span class="cmd">j drunkify [text]</span></span></li>
@@ -135,7 +168,7 @@
                     <li class="tt">minesweeper<span class="subsub">- Minesweeper game in discord <span class="cmd">j minesweeper [columns] [rows] [bombs]</span> Columns, rows, bombs are optional</span></li>
                 </ul>
             </li>
-            <li class="item"><img src="assets/3.png"> Utility
+            <li class="item" id = "util"><img src="assets/3.png"> Utility
                 <ul class="sub">
                     <li class="tt">ping<span class="subsub">- Used to test, if the bot is working and gives latency <span class="cmd">j ping</span></span></li>
                     <li class="tt">botinfo<span class="subsub">- Gives Hosting details <span class="cmd">j botinfo</span></span></li>
@@ -147,9 +180,12 @@
                     <li class="tt">invite<span class="subsub">- Gives link to invite JsM to your other servers <span class="cmd">j invite</span></span></li>
                     <li class="tt">userinfo<span class="subsub">- Gives information about mentioned user <span class="cmd">j userinfo @user</span></span></li>
                     <li class="tt">suggest<span class="subsub">- Sends suggestion to the Creator of JsM <span class="cmd">j suggest [suggestion]</span></span></li>
+                    <li class="tt">rank<span class="subsub">- Shows your or any other user's rank <span class="cmd">j rank</span> or <span class="cmd">j rank @user</span></span></li>
+                    <li class="tt">translate<span class="subsub">- Translates given text to chosen language <span class="cmd">j translate [name of language] [text to translate]</span></span></li>
+                    <li class="tt">poll<span class="subsub">- Creates a poll <span class="cmd">j poll "question" choice1 choice2 choice3 ......</span> Make sure to write question in quotation marks</span></li>
                 </ul>
             </li>
-            <li class="item"><img src="assets/4.png"> Image
+            <li class="item" id = "img"><img src="assets/4.png"> Image
                 <ul class="sub">
                     <li class="tt">aadhaar<span class="subsub">- Gives user's aadhaar card <span class="cmd">j aadhaar @user</span></span></li>
                     <li class="tt">wanted<span class="subsub">- Gives out a wanted poster for user <span class="cmd">j wanted @user</span></span></li>
@@ -158,7 +194,7 @@
                     <li class="tt">dog<span class="subsub">- Returns a picture of a dog <span class="cmd">j dog</span></span></li>
                 </ul>
             </li>
-            <li class="item"><img src="assets/7.png"> Music
+            <li class="item" id = "music"><img src="assets/7.png"> Music
                 <ul class="sub">
                     <li class="tt">join<span class="subsub">- Simply joins a voice channel, doesn't play anything <span class="cmd">j join</span></span></li>
                     <li class="tt">summon<span class="subsub">- Used to switch between voice channels <span class="cmd">j summon</span></span></li>
@@ -176,7 +212,7 @@
                     <li class="tt">remove<span class="subsub">- Removes the song from queue for which index number is given <span class="cmd">j remove [index number]</span> For example : <span class="cmd">j remove 2</span> removes second song from queue.</li>
                 </ul>
             </li>
-            <li class="item"><img src="assets/5.png"> Maths
+            <li class="item" id = "math"><img src="assets/5.png"> Maths
                 <ul class="sub">
                     <li class="tt">cal<span class="subsub">- A simple calculator <span class="cmd">j cal</span></span></li>
                     <li class="tt">sol<span class="subsub">- Solves/Gives output of your questions, can be mathematical or geographical <span class="cmd">j sol 3x^3 + 9x^2 +10x -2 =0</span> or <span class="cmd">j sol what is capital of germany</span></span></li>
@@ -196,7 +232,7 @@
                     </span></li>
                 </ul>
             </li>
-            <li class="item"><img src="assets/6.png"> Chemistry
+            <li class="item" id = "chem"><img src="assets/6.png"> Chemistry
                 <ul class="sub">
                     <li class="tt">bal<span class="subsub">- Used to balance a chemical equation <span class="cmd">j bal PCl5 + H2O = H3PO4 + HCl</span> or <span class="cmd">j balance PCl5 + H2O = H3PO4 + HCl</span> Note: Case Sensitive</span></li>
                     <li class="tt">elem<span class="subsub">- Gives information about the Element. <span class="cmd">j elem H</span> Note: Case Sensitive</span></li>
@@ -206,7 +242,72 @@
                     <li class="tt">combustion<span class="subsub">- Gives equation of combustion of given hydrocarbon. <span class="cmd">j cbt C6H6</span> or <span class="cmd">j combustion CH4</span> Note: Case Sensitive</span></li>
                 </ul>
             </li>
+            <li class="item" id = "prog"><img src="assets/8.png"> Programming
+                <ul class="sub">
+                    <li class="tt">code<span class="subsub">- Run this command to test your code. Supported languages are python, java, c++, c#, c, ruby, kotlin, swift <span class="cmd">j code [name of language] [code]</span></span></li>
+                    <li class="tt">proglangs<span class="subsub">- It tells supported programming languages in the above command <span class="cmd">j proglangs</span></span></li>
+                </ul>
+            </li>
         </ul>
     </div>
+    <script>
+        const backToTopButton = document.querySelector("#back-to-top-btn");
+
+        window.addEventListener("scroll", scrollFunction);
+
+        function scrollFunction() {
+        if (window.pageYOffset > 300) { // Show backToTopButton
+            if(!backToTopButton.classList.contains("btnEntrance")) {
+            backToTopButton.classList.remove("btnExit");
+            backToTopButton.classList.add("btnEntrance");
+            backToTopButton.style.display = "block";
+            }
+        }
+        else { // Hide backToTopButton
+            if(backToTopButton.classList.contains("btnEntrance")) {
+            backToTopButton.classList.remove("btnEntrance");
+            backToTopButton.classList.add("btnExit");
+            setTimeout(function() {
+                backToTopButton.style.display = "none";
+            }, 250);
+            }
+        }
+        }
+
+        backToTopButton.addEventListener("click", smoothScrollBackToTop);
+
+        // function backToTop() {
+        //   window.scrollTo(0, 0);
+        // }
+
+        function smoothScrollBackToTop() {
+        const targetPosition = 0;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 750;
+        let start = null;
+        
+        window.requestAnimationFrame(step);
+
+        function step(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+            if (progress < duration) window.requestAnimationFrame(step);
+        }
+        }
+
+        function easeInOutCubic(t, b, c, d) {
+            t /= d/2;
+            if (t < 1) return c/2*t*t*t + b;
+            t -= 2;
+            return c/2*(t*t*t + 2) + b;
+        };
+        
+        function myFunction() {
+            alert("Please view the site on laptop/desktop. It is under development for mobile devices.");
+        }
+
+    </script>
 </body>
 </html>
